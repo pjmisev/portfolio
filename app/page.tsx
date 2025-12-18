@@ -9,9 +9,6 @@ export default function NeoRetroPortfolio() {
 
     return (
         <div className="min-h-screen bg-[#F1E5D1] text-black p-6 font-sans selection:bg-blue-500 selection:text-white">
-            {/* Navbar Section */}
-            <Navbar/>
-
             {/* Hero Section */}
             <Hero/>
 

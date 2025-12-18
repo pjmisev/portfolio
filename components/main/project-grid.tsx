@@ -39,7 +39,7 @@ export default function ProjectGrid() {
         {
             name: "Portfolio Website",
             description: "You're already here! This website was built using Next.js and Tailwind CSS. It's a simple portfolio website to showcase my work and showcase some of my skills.",
-            github: "https://github.com/pjmisev/ROMifier.git",
+            github: "https://github.com/pjmisev/portfolio.git",
             demo: "",
             image: "/img/portfolio-app.png",
             stack: ["nextjs", "react", "tailwind"]
@@ -47,7 +47,7 @@ export default function ProjectGrid() {
     ];
 
     return (
-        <section className="max-w-5xl mx-auto pb-20">
+        <section id="projects" className="max-w-5xl mx-auto pb-20">
             <div className="flex justify-between items-end mb-10">
                 <h3 className="text-4xl font-black uppercase underline decoration-[6px] underline-offset-[12px]">
                     Selected Works

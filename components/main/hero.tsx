@@ -7,6 +7,7 @@ import {
 } from "react-icons/si";
 import React from "react";
 import {TerminalTypewriter} from "@/components/main/extra/terminal-typewriter";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -25,12 +26,15 @@ export default function Hero() {
                     I'm <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <strong className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</strong> to see the rest!
                 </p>
                 <div className="flex flex-wrap gap-4">
-                    <Button
-                        size="lg"
-                        className="px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-                    >
-                        View Work
-                    </Button>
+                    <Link href="#projects" scroll={true} className="flex gap-2">
+                        <Button
+                            size="lg"
+                            className="px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                        >
+                            View Work
+                        </Button>
+                    </Link>
+
 
                     <a href="https://github.com/pjmisev" target="_blank" rel="noreferrer" className="flex gap-2">
                         <Button
