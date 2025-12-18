@@ -65,7 +65,8 @@ export default function Hero() {
                     <div className="text-gray-300 space-y-2 text-xs sm:text-sm">
                         <div className="opacity-80">
                             <p className="text-blue-400"># System Analysis</p>
-                            <p><span className="text-gray-500">Location:</span> Monaghan, Ireland 🇮🇪</p>
+                            <p><span className="text-gray-500">Name:</span> Pijus Misevicius</p>
+                            <p><span className="text-gray-500">Email:</span> pijus.misevicius@outlook.com</p>
                             <p><span className="text-gray-500">Main_Stack:</span> Laravel / Next.js / React / MySQL</p>
                             <p><span className="text-gray-500">Current_Focus:</span> Building stuff with <strong>impact.</strong></p>
 
