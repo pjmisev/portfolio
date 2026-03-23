@@ -6,9 +6,54 @@ import {
     SiGithub,
     SiLinkedin
 } from "react-icons/si";
-import React from "react";
+import { HiDownload } from "react-icons/hi";
+import React, { useEffect, useState } from "react";
 import {TerminalTypewriter} from "@/components/main/extra/terminal-typewriter";
 import Link from "next/link";
+import { Download, FileText } from "lucide-react";
+
+function CvTerminalLine() {
+    const [phase, setPhase] = useState<"idle" | "generating" | "done">("idle");
+
+    useEffect(() => {
+        const start = setTimeout(() => setPhase("generating"), 1200);
+        const done = setTimeout(() => setPhase("done"), 2800);
+        return () => { clearTimeout(start); clearTimeout(done); };
+    }, []);
+
+    if (phase === "idle") return null;
+
+    return (
+        <div className="mt-4 p-2 border border-gray-700 bg-gray-900/50">
+            <p className="text-yellow-500">// CV</p>
+            <p>
+                {phase === "generating" ? (
+                    <>
+                        <span className="text-blue-400">CV generating</span>
+                        <span className="animate-pulse">...</span>
+                    </>
+                ) : (
+                    <>
+                        <span className="text-blue-400">CV generating</span>
+                        <span>... </span>
+                        <span className="text-green-500">Done!</span>
+                    </>
+                )}
+            </p>
+            {phase === "done" && (
+                 <a href="/Pijus Misevicius CV.pdf" target="_blank" rel="noreferrer" className="w-full">
+                    <Button
+                        variant="outline"
+                        size="lg"
+                        className="flex items-center text-black my-2 justify-center w-full bg-white px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                    >
+                        <FileText className="mr-2 h-6 w-6" /> View CV
+                    </Button>
+                </a>
+            )}
+        </div>
+    );
+}
 
 export default function Hero() {
     return (
@@ -24,7 +69,7 @@ export default function Hero() {
                     </span>
                 </h2>
                 <p className="text-xl font-medium mb-8 max-w-md leading-relaxed text-gray-900">
-                    I'm <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <strong className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</strong> to see the rest!
+                    I'm <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <a href="#skills" className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</a> to see the rest!
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 w-full md:w-auto">
                     <a href="https://github.com/pjmisev" target="_blank" rel="noreferrer" className="w-full">
@@ -48,7 +93,7 @@ export default function Hero() {
                 </div>
             </div>
 
-            <Card className="hidden md:flex flex-col relative aspect-video md:aspect-square bg-[#1a1a1a] p-0 overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
+            <Card className="hidden md:flex flex-col relative aspect-video md:aspect-square bg-[#1a1a1a] p-0 overflow-hidden border-4 border-black shadow-[12px_12px_0px_0px_rgba(0,0,0,1)] hover:shadow-[12px_12px_0px_0px_rgba(0,0,0,1)]">
                 <div className="w-full bg-white border-b-4 border-black p-3 flex items-center justify-between">
                     <div className="flex gap-2">
                         <div className="w-3 h-3 rounded-full border-2 border-black bg-[#ff5f56]" />
@@ -80,6 +125,8 @@ export default function Hero() {
                                 <p>Compiling assets...</p>
                                 <p className="text-green-500">DONE: Project optimized for {new Date().getFullYear()}.</p>
                             </div>
+
+                            <CvTerminalLine />
                         </div>
                     </div>
 

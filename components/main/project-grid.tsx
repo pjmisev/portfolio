@@ -103,8 +103,8 @@ export default function ProjectGrid() {
     return (
         <section id="projects" className="max-w-5xl mx-auto pb-20">
             <div className="flex justify-between items-end mb-10">
-                <h3 className="text-4xl font-black uppercase underline decoration-[6px] underline-offset-[12px]">
-                    Selected Works
+                <h3 className="text-4xl font-black uppercase border-b-[6px] border-black pb-1">
+                Projects
                 </h3>
             </div>
 
