@@ -91,6 +91,15 @@ export default function Hero() {
                             <SiLinkedin className="mr-2 h-6 w-6" /> LinkedIn
                         </Button>
                     </a>
+                    <a href="/Pijus Misevicius CV.pdf" target="_blank" rel="noreferrer" className="w-full md:hidden">
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            className="flex items-center text-black my-2 justify-center w-full bg-white px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                        >
+                            <FileText className="mr-2 h-6 w-6" /> View CV
+                        </Button>
+                    </a>
                 </div>
             </div>
 
