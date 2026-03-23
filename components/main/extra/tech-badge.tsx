@@ -12,7 +12,7 @@ import { TbBrandCSharp } from "react-icons/tb";
 
 interface TechBadgeProps {
   name: string;
-  icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  icon: React.ComponentType<React.SVGProps<SVGSVGElement> & { size?: number }>
   color: string;
   border: string;
   shadow: string;

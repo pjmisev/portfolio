@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 "use client";
 import { Badge } from "@/components/retroui/Badge";
 import { Button } from "@/components/retroui/Button";
@@ -69,7 +70,7 @@ export default function Hero() {
                     </span>
                 </h2>
                 <p className="text-xl font-medium mb-8 max-w-md leading-relaxed text-gray-900">
-                    I'm <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <a href="#skills" className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</a> to see the rest!
+                    I&apos;m <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <a href="#skills" className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</a> to see the rest!
                 </p>
                 <div className="grid md:grid-cols-2 gap-4 w-full md:w-auto">
                     <a href="https://github.com/pjmisev" target="_blank" rel="noreferrer" className="w-full">
