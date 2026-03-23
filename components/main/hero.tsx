@@ -3,7 +3,8 @@ import { Badge } from "@/components/retroui/Badge";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
 import {
-    SiGithub
+    SiGithub,
+    SiLinkedin
 } from "react-icons/si";
 import React from "react";
 import {TerminalTypewriter} from "@/components/main/extra/terminal-typewriter";
@@ -25,24 +26,23 @@ export default function Hero() {
                 <p className="text-xl font-medium mb-8 max-w-md leading-relaxed text-gray-900">
                     I'm <strong>Pijus</strong>, a full-stack developer based in Ireland. I currently work on Laravel, React, Next.js, and Tailwind CSS projects. However, that is not the full extent of my skills. Click <strong className="cursor-pointer underline decoration-2 underline-offset-4 hover:text-blue-600 transition-colors">here</strong> to see the rest!
                 </p>
-                <div className="flex flex-wrap gap-4">
-                    <Link href="#projects" scroll={true} className="flex gap-2">
-                        <Button
-                            size="lg"
-                            className="px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
-                        >
-                            View Work
-                        </Button>
-                    </Link>
-
-
-                    <a href="https://github.com/pjmisev" target="_blank" rel="noreferrer" className="flex gap-2">
+                <div className="grid md:grid-cols-2 gap-4 w-full md:w-auto">
+                    <a href="https://github.com/pjmisev" target="_blank" rel="noreferrer" className="w-full">
                         <Button
                             variant="outline"
                             size="lg"
-                            className="bg-white px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                            className="flex items-center justify-center w-full bg-white px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
                         >
                             <SiGithub className="mr-2 h-6 w-6" /> GitHub
+                        </Button>
+                    </a>
+                    <a href="https://www.linkedin.com/in/pijus-misevicius" target="_blank" rel="noreferrer" className="flex gap-2">
+                        <Button
+                            variant="outline"
+                            size="lg"
+                            className="flex items-center justify-center w-full bg-blue-600 text-white px-8 h-14 text-lg border-2 border-black shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] transition-all active:translate-x-[2px] active:translate-y-[2px] active:shadow-none"
+                        >
+                            <SiLinkedin className="mr-2 h-6 w-6" /> LinkedIn
                         </Button>
                     </a>
                 </div>
@@ -71,6 +71,7 @@ export default function Hero() {
                             <p className="text-blue-400"># System Analysis</p>
                             <p><span className="text-gray-500">Name:</span> Pijus Misevicius</p>
                             <p><span className="text-gray-500">Email:</span> pijus.misevicius@outlook.com</p>
+                            <p><span className="text-gray-500">Location:</span> Monaghan, Co. Monaghan, Ireland.</p>
                             <p><span className="text-gray-500">Main_Stack:</span> Laravel / Next.js / React / MySQL</p>
                             <p><span className="text-gray-500">Current_Focus:</span> Building stuff with <strong>impact.</strong></p>
 

@@ -4,6 +4,7 @@ import Navbar from "@/components/main/navbar";
 import Hero from "@/components/main/hero";
 import ProjectGrid from "@/components/main/project-grid";
 import Footer from "@/components/main/footer";
+import Technologies from '@/components/main/technologies';
 
 export default function NeoRetroPortfolio() {
 
@@ -14,6 +15,9 @@ export default function NeoRetroPortfolio() {
 
             {/* Project Grid */}
             <ProjectGrid/>
+
+            {/* Technologies */}
+            <Technologies/>
 
             {/* Footer */}
             <Footer/>

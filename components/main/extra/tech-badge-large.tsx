@@ -18,9 +18,9 @@ interface TechBadgeProps {
   shadow: string;
 }
 
-export default function TechBadge({
+export default function TechBadgeLarge({
   name,
-  icon: Icon,  // ← rename here
+  icon: Icon,
   color,
   border,
   shadow,
@@ -33,9 +33,9 @@ export default function TechBadge({
         color,
         boxShadow: `2px 2px 0px 0px ${shadow}`,
       }}
-      className="flex items-center gap-2 bg-white text-black font-bold py-1 px-3 border-2"
+      className="flex items-center gap-2 bg-white text-black font-bold py-4 px-6 border-4 rounded-3xl"
     >
-      <Icon size={14} /> <span>{name}</span>
+      <Icon size={32} /> <span className="font-bold">{name}</span>
     </Badge>
   );
 }
