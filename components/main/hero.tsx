@@ -77,7 +77,7 @@ export default function Hero() {
                             <div className="mt-4 p-2 border border-gray-700 bg-gray-900/50">
                                 <p className="text-yellow-500">// Recent Activity</p>
                                 <p>Compiling assets...</p>
-                                <p className="text-green-500">DONE: Project optimized for 2025.</p>
+                                <p className="text-green-500">DONE: Project optimized for {new Date().getFullYear()}.</p>
                             </div>
                         </div>
                     </div>

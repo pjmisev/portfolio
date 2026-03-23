@@ -1,6 +1,7 @@
 "use client";
 import { Card } from "@/components/retroui/Card";
 import { ExternalLink } from "lucide-react";
+// @ts-expect-error Because for some reason the type definitions are not exported correctly.
 import { SiGithub } from "react-icons/si";
 import React from "react";
 import { Button } from "@/components/retroui/Button";
